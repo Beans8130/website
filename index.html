@@ -3,22 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
   <title>Oscar Elliott</title>
-</head>
-<body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Oscar Elliott</h1>
-      <p class="subtitle">
-        BSc (Hons) Dual Honours Computer Science & Neuroscience
-      </p>
 
-      <p>
-        Ver 1
-      </p>
+  <!-- Bulma (local) -->
+  <link rel="stylesheet" href="css/bulma.min.css" />
+
+  <!-- Your overrides -->
+  <link rel="stylesheet" href="css/site.css" />
+
+  <meta name="description" content="Oscar Elliott — BSc (Hons) Dual Honours Computer Science & Neuroscience" />
+</head>
+
+<body>
+  <!-- Top section -->
+  <section class="section">
+    <div class="container" style="max-width: 920px;">
+      <div class="level is-mobile mb-5">
+        <div class="level-left">
+          <div class="level-item">
+            <div>
+              <h1 class="title is-2 mb-2">Oscar Elliott</h1>
+              <p class="subtitle is-5">
+                BSc (Hons) Dual Honours Computer Science &amp; Neuroscience
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="content mb-6">
+        <h2 class="title is-4">About</h2>
+        <p>
+          I’m a second-year dual honours student studying Computer Science and Neuroscience, interested in how people
+          interact with technology and how systems behave in the real world. I enjoy practical projects that sit between
+          theory and implementation.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="mb-6">
+        <h2 class="title is-4">Links</h2>
+
+        <div class="buttons">
+          <!-- Replace # with your real links -->
+          <a class="button is-link is-light" href="#" target="_blank" rel="noopener">
+            Download CV (PDF)
+          </a>
+
+          <a class="button is-link" href="#" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+
+          <a class="button is-black is-light" href="mailto:contact@oscarelliott.uk">
+            Email
+          </a>
+        </div>
+
+        <p class="is-size-7 has-text-grey">
+          Tip: host your CV as <code>assets/Oscar_Elliott_CV.pdf</code> and link to it above.
+        </p>
+      </div>
+
+      <!-- Projects -->
+      <div class="mb-6">
+        <h2 class="title is-4">Selected work</h2>
+
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <div class="box">
+              <p class="title is-6 mb-2">ESP32 Interactive Display</p>
+              <p class="is-size-7 has-text-grey mb-3">Embedded systems • Input/output • State logic</p>
+              <p class="mb-4">
+                Designed and built an interactive embedded project using an ESP32 with user input and visual feedback.
+              </p>
+              <div class="buttons are-small">
+                <a class="button is-link is-light" href="#" target="_blank" rel="noopener">Write-up</a>
+                <a class="button is-link" href="#" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box">
+              <p class="title is-6 mb-2">HCI Usability Study &amp; Redesign</p>
+              <p class="is-size-7 has-text-grey mb-3">HCI • Evaluation • Iteration</p>
+              <p class="mb-4">
+                Conducted a usability study and produced iterative interface designs informed by findings and guidelines.
+              </p>
+              <div class="buttons are-small">
+                <a class="button is-link is-light" href="#" target="_blank" rel="noopener">Case study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more cards later; keep it short initially -->
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Footer -->
+      <footer class="py-4">
+        <div class="level is-mobile">
+          <div class="level-left">
+            <p class="is-size-7 has-text-grey">
+              © <span id="year"></span> Oscar Elliott
+            </p>
+          </div>
+          <div class="level-right">
+            <p class="is-size-7">
+              <a href="mailto:contact@oscarelliott.uk">contact@oscarelliott.uk</a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </section>
-</body>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
