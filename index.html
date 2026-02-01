@@ -118,20 +118,20 @@
 
   <script>
   // Accent palette (hex + rgb)
-  const accents = [
-    { hex: "#339966", rgb: "51,153,102" },  // green
-    { hex: "#333399", rgb: "51,51,153" },   // blue
-    { hex: "#993366", rgb: "153,51,102" },  // pink
-    { hex: "#999933", rgb: "153,153,51" }   // yellow
-  ];
-
-  const pick = accents[Math.floor(Math.random() * accents.length)];
-  document.documentElement.style.setProperty("--accent", pick.hex);
-  document.documentElement.style.setProperty("--accent-rgb", pick.rgb);
-
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    const accents = [
+      { hex: "#339966", rgb: "51,153,102" },  // green
+      { hex: "#333399", rgb: "51,51,153" },   // blue
+      { hex: "#993366", rgb: "153,51,102" },  // pink
+      { hex: "#999933", rgb: "153,153,51" }   // yellow
+    ];
+  
+    const pick = accents[Math.floor(Math.random() * accents.length)];
+    document.documentElement.style.setProperty("--accent", pick.hex);
+    document.documentElement.style.setProperty("--accent-rgb", pick.rgb);
+  
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
