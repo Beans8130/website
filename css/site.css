@@ -1,7 +1,12 @@
 :root {
-  --accent: #1f8a5b; /* green */
+  --accent: #339966; /* green #1f8a5b*/
 }
-
+/* 
+green #339966
+blue #333399
+pink #993366
+yellow #999933
+*/
 a {
   color: var(--accent);
 }
