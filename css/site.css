@@ -22,3 +22,18 @@ code {
   padding: 0.15em 0.35em;
   border-radius: 0.35em;
 }
+
+/* mobile horizontal overflow fix */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* header wrap */
+.title,
+.subtitle {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
