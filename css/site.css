@@ -1,9 +1,9 @@
 :root {
-  /* Accent */
+  /* Accent (overridden by JS on load) */
   --accent: #333399;
   --accent-rgb: 51, 51, 153;
 
-  /* site palette */
+  /* Light theme */
   --bg: #fcfcfd;
   --text: #111827;
   --muted: #4b5563;
@@ -11,17 +11,68 @@
   --border: rgba(17, 24, 39, 0.10);
 }
 
-/* Base look */
-html { background: var(--bg); }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --text: #e5e7eb;
+    --muted: #a1a1aa;
+    --card: rgba(255, 255, 255, 0.04);
+    --border: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Base */
+html {
+  background: var(--bg);
+}
+
 body {
+  background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   line-height: 1.6;
 }
 
+/* Typography */
+.title,
+h1, h2, h3 {
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.subtitle,
+p,
+li,
+.content,
+.has-text-grey,
+.has-text-grey-light {
+  color: var(--muted);
+}
+
 /* Links */
-a { color: var(--accent); }
-a:hover { text-decoration: underline; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Containers */
+.container {
+  max-width: 860px !important;
+  overflow-wrap: anywhere;
+}
+
+/* Cards */
+.box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: none;
+}
 
 /* Buttons */
 .button.is-link {
@@ -35,32 +86,30 @@ a:hover { text-decoration: underline; }
   border-color: rgba(var(--accent-rgb), 0.25) !important;
 }
 
-/* Custom font decoration */
-.title { letter-spacing: -0.02em; }
-.subtitle { color: var(--muted) !important; }
-
-/*Custome cards*/
-.box {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: none;
+.button.is-black.is-light {
+  background: rgba(17, 24, 39, 0.06);
+  color: var(--text);
 }
 
-/* Code pill */
+@media (prefers-color-scheme: dark) {
+  .button.is-black.is-light {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Inline code */
 code {
   background: rgba(17, 24, 39, 0.06);
   padding: 0.15em 0.35em;
   border-radius: 0.35em;
 }
 
-/* Mobile overflow */
+/* Mobile fixes */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Header wrap */
 .title,
 .subtitle {
   overflow-wrap: anywhere;
@@ -72,6 +121,7 @@ html, body {
     font-size: 2rem;
     line-height: 1.2;
   }
+
   .subtitle {
     font-size: 1.1rem;
   }
