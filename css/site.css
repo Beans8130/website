@@ -1,45 +1,69 @@
 :root {
+  /* Accent */
   --accent: #333399;
-  --accent-rgb: 153, 51, 102;
-}
-/* 
-green #339966
-blue #333399
-pink #993366
-yellow #999933
-*/
-a {
-  color: var(--accent);
+  --accent-rgb: 51, 51, 153;
+
+  /* site palette */
+  --bg: #fcfcfd;
+  --text: #111827;
+  --muted: #4b5563;
+  --card: #ffffff;
+  --border: rgba(17, 24, 39, 0.10);
 }
 
+/* Base look */
+html { background: var(--bg); }
+body {
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+/* Links */
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+/* Buttons */
 .button.is-link {
-  background-color: var(--accent);
-  border-color: var(--accent);
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
 }
 
 .button.is-link.is-light {
-  color: var(--accent);
-  background-color: rgba(var(--accent-rgb), 0.12);
-  border-color: rgba(var(--accent-rgb), 0.25);
+  color: var(--accent) !important;
+  background-color: rgba(var(--accent-rgb), 0.12) !important;
+  border-color: rgba(var(--accent-rgb), 0.25) !important;
 }
 
+/* Custom font decoration */
+.title { letter-spacing: -0.02em; }
+.subtitle { color: var(--muted) !important; }
+
+/*Custome cards*/
+.box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+/* Code pill */
 code {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(17, 24, 39, 0.06);
   padding: 0.15em 0.35em;
   border-radius: 0.35em;
 }
 
-/* mobile horizontal overflow fix */
+/* Mobile overflow */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* header wrap */
+/* Header wrap */
 .title,
 .subtitle {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   hyphens: auto;
 }
 
@@ -48,7 +72,6 @@ html, body {
     font-size: 2rem;
     line-height: 1.2;
   }
-
   .subtitle {
     font-size: 1.1rem;
   }
