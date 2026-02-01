@@ -1,5 +1,6 @@
 :root {
-  --accent: #993366; /* green #1f8a5b*/
+  --accent: #993366;
+  --accent-rgb: 153, 51, 102;
 }
 /* 
 green #339966
@@ -18,8 +19,8 @@ a {
 
 .button.is-link.is-light {
   color: var(--accent);
-  background-color: rgba(31, 138, 91, 0.12);
-  border-color: rgba(31, 138, 91, 0.25);
+  background-color: rgba(var(--accent-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.25);
 }
 
 code {
