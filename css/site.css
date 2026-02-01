@@ -42,3 +42,13 @@ html, body {
   hyphens: auto;
 }
 
+@media (max-width: 480px) {
+  .title.is-2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
