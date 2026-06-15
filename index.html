@@ -1,48 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Check Back Later</title>
-    <style>
-        /* Basic page styling */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscar Elliott</title>
+  <style>
+    :root {
+      --accent:    #A56A63;
+      --highlight: #D4A69F;
+    }
 
-        .message-box {
-            background: #ffffff;
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
 
-        h1 {
-            margin: 0 0 10px;
-            font-size: 28px;
-            color: #333;
-        }
+    ::selection {
+      background: var(--highlight);
+      color: #000;
+    }
 
-        p {
-            margin: 0;
-            font-size: 16px;
-            color: #666;
-        }
-    </style>
+    body {
+      font-family: "Neue Haas Grotesk", "Inter", system-ui, sans-serif;
+      background: #fff;
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Large watermark name behind everything */
+    .watermark {
+      position: fixed;
+      bottom: -0.15em;
+      left: -0.05em;
+      font-size: clamp(8rem, 22vw, 20rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #e8e8e8;
+      user-select: none;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    /* Centre message card */
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 400px;
+      width: calc(100% - 3rem);
+      padding: 2.5rem;
+      border: 1px solid #e8e8e8;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .card-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    .card-footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8e8e8;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #aaa;
+    }
+
+    .card-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--highlight);
+      padding-bottom: 1px;
+    }
+  </style>
 </head>
 <body>
-    <div class="message-box">
-        <h1>Check Back Later</h1>
-        <h3>Oscar: Updating this page :)</h3>
-        <p>This page isn't available right now. Please come back soon.</p>
+
+  <span class="watermark" aria-hidden="true">Oscar</span>
+
+  <div class="card" role="main">
+    <p class="card-label">:(</p>
+    <h1>This site is being updated.</h1>
+    <p>
+      I am currently rebuilding my portfolio and website. 
+      If you would like to get in touch, please reach out via email.
+    </p>
+    <div class="card-footer">
+      <a href="mailto:oscarelliottowe0705@outlook.com">oscarelliottowe0705@outlook.com</a>
     </div>
+  </div>
+
 </body>
 </html>
-
